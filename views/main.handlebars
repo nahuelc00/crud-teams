@@ -1,0 +1,46 @@
+<div id="root">
+    <main>
+        <h1 class="title">PlayersApp</h1>
+        <div class="counter-teams">
+            <p class="counter-teams__title">Here are {{lengthTeams}} teams</p>
+            <button>Add team</button>
+        </div>
+
+        <div class="titles-grid">
+            <p>Teams</p>
+            <p>Countries</p>
+            <p>Actions</p>
+        </div>
+
+
+        <div class="grid">
+            <div class="teams-container">
+                <ul>
+                    <div>
+                        {{#each nameTeams}}
+                        <li><img src={{lookup ../shieldTeams @index}} alt={{this}}>{{this}}</li>
+                        {{/each}}
+                    </div>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {{#each countries}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {{#each countries}}
+                    <li class="actions">
+                        <button class="actions__see">See</button>
+                        <button class="actions__edit">Edit</button>
+                        <button class="actions__delete">Delete</button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
