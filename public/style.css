@@ -198,16 +198,16 @@ label {
   max-width: 500px;
 }
 
-.team-page__container-close {
+.container-cross-close {
   width: 100%;
 }
 
-.team-page__close {
+.cross-close {
   font-size: 20px;
   cursor: pointer;
 }
 @media (min-width: 481px) {
-  .team-page__close {
+  .cross-close {
     font-size: 25px;
   }
 }

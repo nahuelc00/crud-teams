@@ -1,7 +1,8 @@
 <div id={{teamToSend.id}} class="team-page">
-    <div class="team-page__container-close">
-        <span class="team-page__close">X</span>
+    <div class="container-cross-close">
+        {{> crossClose }}
     </div>
+
     <img class="team-page__img" src="{{teamToSend.crestUrl}}" alt="{{teamToSend.name}}">
 
     <h1 class="team-page__title">{{teamToSend.shortName}}</h1>

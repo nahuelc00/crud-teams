@@ -1,5 +1,5 @@
 function handlerClosePage() {
-  const $closePage = document.querySelector('.team-page__close');
+  const $closePage = document.querySelector('.cross-close');
   $closePage.addEventListener('click', () => {
     location.replace('/');
   });
