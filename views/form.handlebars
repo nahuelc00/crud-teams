@@ -1,0 +1,92 @@
+<form id={{#if teamToModify.id}}{{teamToModify.id}}{{else}} "" {{/if}} class="form-addTeam">
+    <fieldset class="name">
+        <label>Name:</label>
+        <input placeholder="Football Club Barcelona" name="name" type="text" {{#if teamToModify.name}} value= "{{teamToModify.name}}" {{else}} "" {{/if}}>
+        <p class="name__error error"></p>
+    </fieldset>
+
+    <fieldset class="shortName">
+        <label>Shortname:</label>
+        <input placeholder="Barcelona" {{#if teamToModify.shortName}} value="{{teamToModify.shortName}}"{{else}} "" {{/if}} name="shortName"
+            type="text">
+        <p class="shortname__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Abbreviation:</label>
+        <input placeholder="BAR" {{#if teamToModify.tla}} value="{{teamToModify.tla}}"{{else}} "" {{/if}} name="abbreviation" type="text">
+        <p class="abbreviation__error error"></p>
+    </fieldset>
+
+    <fieldset class="area-name">
+        <label>Name Area</label>
+        <input placeholder="Spain" {{#if teamToModify.area.name}} value="{{teamToModify.area.name}}"{{else}} "" {{/if}} name="nameArea"
+            type="text">
+        <p class="area-name__error error"></p>
+    </fieldset>
+
+    <fieldset class="area-id">
+        <label>ID Area</label>
+        <input placeholder="2224" {{#if teamToModify.area.id}}value={{teamToModify.area.id}}{{else}} "" {{/if}} name="idArea" type="number">
+        <p class="area-id__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Address </label>
+        <input placeholder="C. d'Arístides Maillol, 12, 08028 Barcelona, España" {{#if teamToModify.address}} value="{{teamToModify.address}}"{{else}} "" {{/if}} name="address" type="text">
+        <p class="address__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Phone </label>
+        <input placeholder="902189900" {{#if teamToModify.phone}}value="{{teamToModify.phone}}"{{else}} "" {{/if}} name="phone" type="string">
+        <p class="phone__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Web </label>
+        <input placeholder="https://www.fcbarcelona.es/" {{#if teamToModify.website}} value="{{teamToModify.website}}"{{else}} "" {{/if}} name="website" type="text">
+        <p class="web__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Email </label>
+        <input placeholder="oab@fcbarcelona.cat" {{#if teamToModify.email}} value="{{teamToModify.email}}"{{else}} "" {{/if}} name="email" type="email">
+        <p class="email__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Founded </label>
+        <input placeholder="1899" {{#if teamToModify.founded}} value={{teamToModify.founded}}{{else}} "" {{/if}} name="founded" type="number">
+        <p class="founded__error error"></p>
+        </fieldset>
+
+    <fieldset>
+        <label>Colors </label>
+        <input placeholder="Red / Blue" {{#if teamToModify.clubColors}} value="{{teamToModify.clubColors}}"{{else}} "" {{/if}} name="colors"
+            type="text">
+        <p class="colors__error error"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Stadium </label>
+        <input placeholder="Camp Nou" {{#if teamToModify.venue}} value="{{teamToModify.venue}}"{{else}} "" {{/if}} name="stadium" type="text">
+        <p class="stadium__error error"></p>
+        </fieldset>
+
+    <fieldset>
+        <label>Shield: </label>
+        <input name="shieldImg" type="file">
+        <p class="shield__error error"></p>
+    </fieldset>
+
+    {{#if teamToModify}}
+        <button type="submit">Update team</button>
+
+    {{else}}
+        <button type="submit">Send team</button>
+
+    {{/if}}
+
+</form>
+<script src="/handleForm.js"></script>

@@ -2,11 +2,11 @@
     <main>
         <h1 class="title">PlayersApp</h1>
         <div class="counter-teams">
-            <p class="counter-teams__title">Here are {{lengthTeams}} teams</p>
-            <button>Add team</button>
+            <p class="counter-teams__title">There are {{lengthTeams}} teams</p>
+            <button class="counter-teams__button">Add team</button>
         </div>
 
-        <div class="titles-grid">
+        <div class="titles">
             <p>Teams</p>
             <p>Countries</p>
             <p>Actions</p>
@@ -14,11 +14,14 @@
 
 
         <div class="grid">
-            <div class="teams-container">
+            <div class="grid__teams-container">
                 <ul>
                     <div>
                         {{#each nameTeams}}
-                        <li><img src={{lookup ../shieldTeams @index}} alt={{this}}>{{this}}</li>
+                        <li id={{lookup ../ids @index}} class="team">
+                            <img class="team__img" src={{lookup ../shieldTeams @index}} alt="{{this}}">
+                            {{this}}
+                        </li>
                         {{/each}}
                     </div>
                 </ul>
@@ -32,11 +35,11 @@
             </div>
             <div>
                 <ul>
-                    {{#each countries}}
+                    {{#each ids}}
                     <li class="actions">
-                        <button class="actions__see">See</button>
-                        <button class="actions__edit">Edit</button>
-                        <button class="actions__delete">Delete</button>
+                        {{> buttonSee }}
+                        {{> buttonEdit }}
+                        {{> buttonDelete }}
                     </li>
                     {{/each}}
                 </ul>
@@ -44,3 +47,8 @@
         </div>
     </main>
 </div>
+
+<script src="/addTeam.js"></script> 
+<script src="/handleButtonsSee.js"></script> 
+<script src="/handleButtonsEdit.js"></script>
+<script src="/handleButtonsDelete.js"></script>

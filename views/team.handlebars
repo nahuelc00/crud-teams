@@ -1,0 +1,65 @@
+<div id={{teamToSend.id}} class="team-page">
+    <div class="team-page__container-close">
+        <span class="team-page__close">X</span>
+    </div>
+    <img class="team-page__img" src="{{teamToSend.crestUrl}}" alt="{{teamToSend.name}}">
+
+    <h1 class="team-page__title">{{teamToSend.shortName}}</h1>
+
+    <div>
+        <div>
+            <div class="team-page__information">
+                <p>Area Name: </p>
+                <p class="team-page__value">{{teamToSend.area.name}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Area Id:</p>
+                <p class="team-page__value">{{teamToSend.area.id}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Name:</p>
+                <p class="team-page__value">{{teamToSend.name}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Abbreviation:</p>
+                <p class="team-page__value">{{teamToSend.tla}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Phone:</p>
+                <p class="team-page__value">{{teamToSend.phone}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Web:</p>
+                <a class="team-page__value" target="_blank" href="{{teamToSend.website}}">{{teamToSend.website}}</a>
+            </div>
+            <div class="team-page__information">
+                <p>Email:</p>
+                <p class="team-page__value">{{#if teamToSend.email}} {{teamToSend.email}} {{else}} ---- {{/if}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Founded in:</p>
+                <p class="team-page__value">{{teamToSend.founded}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Colors:</p>
+                <p class="team-page__value">{{teamToSend.clubColors}}</p>
+            </div>
+            <div class="team-page__information">
+                <p>Stadium:</p>
+                <p class="team-page__value">{{teamToSend.venue}}</p>
+            </div>
+            <div class="team-page__information team-page__information-last">
+                <p>Address:</p>
+                <p class="team-page__value">{{teamToSend.address}}</p>
+            </div>
+            <div class="team-page__buttons">
+                {{> buttonEdit }}
+                {{> buttonDelete }}
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="/handleButtonsDelete.js"></script>
+<script src="/handleButtonsEdit.js"></script>
+<script src="/handleClosePageTeam.js"></script>
