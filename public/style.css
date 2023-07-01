@@ -202,6 +202,11 @@ label {
   width: 100%;
 }
 
+.container-cross-close-form{
+  max-width: 900px;
+  margin: 20px auto 0 auto;
+}
+
 .cross-close {
   font-size: 20px;
   cursor: pointer;
