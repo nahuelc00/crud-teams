@@ -7,8 +7,7 @@ function handleButtonsSee() {
     $button.addEventListener('click', () => {
       const idTeam = $button.getAttribute('data-id-team');
       const urlTeam = `http://localhost:8080/team/${idTeam}/see`;
-      window.history.pushState('', '', urlTeam);
-      location.reload();
+      location.replace(urlTeam);
     });
   });
 }

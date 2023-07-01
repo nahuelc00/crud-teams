@@ -161,8 +161,7 @@ function handleSubmitForm() {
         }).then(() => {
           alert('Team Saved Succesfully');
         }).then(() => {
-          window.history.pushState('', '', '/');
-          location.reload();
+          location.replace('/');
         });
       }
 
@@ -175,8 +174,7 @@ function handleSubmitForm() {
         }).then(() => {
           alert('Team Saved Succesfully');
         }).then(() => {
-          window.history.pushState('', '', '/');
-          location.reload();
+          location.replace('/');
         });
       }
     }

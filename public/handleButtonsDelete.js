@@ -4,8 +4,7 @@
 
 function showAlertAndRedirect() {
   alert('Team deleted');
-  window.history.pushState('', '', '/');
-  location.reload();
+  location.replace('/');
 }
 
 function deleteTeam(idTeam) {

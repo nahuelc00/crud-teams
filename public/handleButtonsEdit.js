@@ -1,8 +1,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-undef */
 function redirect(idTeam) {
-  window.history.pushState('', '', `/form/edit/${idTeam}`);
-  location.reload();
+  location.replace(`/form/edit/${idTeam}`);
 }
 
 function editTeam(idTeam) {
