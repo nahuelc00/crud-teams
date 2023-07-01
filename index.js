@@ -55,8 +55,6 @@ app.get('/form/edit/:id', (req, res) => {
   const teams = getTeams();
   const teamToModify = teams.find((team) => Number(team.id) === paramId);
 
-  teamToModify.phone.split(' ').join('');
-
   res.statusCode = 200;
   res.contentType('html');
   res.render('form', {
