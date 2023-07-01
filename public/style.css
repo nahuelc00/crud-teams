@@ -5,7 +5,7 @@
 body {
   color: white;
   background-color: #222;
-  margin: 0;
+  margin: 0 5px 0 5px;
   font-family: system-ui;
 }
 
@@ -86,6 +86,7 @@ li {
 }
 
 .team__img {
+  filter: drop-shadow(2px 4px 6px black);
   width: 35px;
   height: 35px;
   margin: 0 15px 0 0;
@@ -96,7 +97,6 @@ li {
     width: 50px;
   }
 }
-
 
 .actions {
   display: grid;
@@ -240,13 +240,15 @@ label {
 }
 
 .team-page__information p,
-.team-page__information a {
+.team-page__information a,
+.team-page__container-map p {
   margin: 0;
   font-size: 12px;
 }
 @media (min-width: 481px) {
   .team-page__information p,
-  .team-page__information a {
+  .team-page__information a,
+  .team-page__container-map p {
     font-size: 16px;
   }
 }
@@ -260,8 +262,26 @@ label {
   margin: 0 0 30px 0;
 }
 
+.team-page__information--no-margin {
+  margin: 0;
+}
+
+.team-page__container-map {
+  display: grid;
+  justify-items: center;
+  margin: 0 0 50px 0;
+}
+
+.team-page__map {
+  margin: 10px 0 0 0;
+}
+
 .team-page__value {
   font-weight: 500;
+}
+
+.team-page__value--color {
+  color: cornflowerblue;
 }
 
 .team-page__buttons {
@@ -270,9 +290,7 @@ label {
   gap: 20px;
 }
 
-.container-buttons-page-team {
-  display: flex;
-  justify-content: space-around;
-  gap: 50px;
-  margin-top: 10px;
+.team-page__buttons > button {
+  border: 1px solid;
+  padding: 5px 10px 5px 10px;
 }

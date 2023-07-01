@@ -30,7 +30,8 @@
             </div>
             <div class="team-page__information">
                 <p>Web:</p>
-                <a class="team-page__value" target="_blank" href="{{teamToSend.website}}">{{teamToSend.website}}</a>
+                <a class="team-page__value team-page__value--color" target="_blank"
+                    href="{{teamToSend.website}}">{{teamToSend.website}}</a>
             </div>
             <div class="team-page__information">
                 <p>Email:</p>
@@ -44,13 +45,15 @@
                 <p>Colors:</p>
                 <p class="team-page__value">{{teamToSend.clubColors}}</p>
             </div>
-            <div class="team-page__information">
+            <div class="team-page__information team-page__information-last">
                 <p>Stadium:</p>
                 <p class="team-page__value">{{teamToSend.venue}}</p>
             </div>
-            <div class="team-page__information team-page__information-last">
-                <p>Address:</p>
-                <p class="team-page__value">{{teamToSend.address}}</p>
+            <div class="team-page__container-map">
+                <p class="team-page__information team-page__information--no-margin team-page__value">
+                    {{teamToSend.address}}</p>
+                <iframe class="team-page__map" width="250" height="150" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?q={{teamToSend.address}}&key=AIzaSyAKMMhR5VZ_KU4lZs3EsHLHo0div3X2viM"></iframe>
             </div>
             <div class="team-page__buttons">
                 {{> buttonEdit }}
