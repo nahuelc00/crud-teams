@@ -22,7 +22,8 @@ function handleButtonsDelete() {
 
   $buttonsDelete.forEach(($button) => {
     $button.addEventListener('click', () => {
-      const isTeamDeleted = renderDeleteConfirmation('Are you sure you want to delete the equipment?');
+      const isTeamDeleted = renderDeleteConfirmation('Are you sure you want to delete the team?');
+
       if (isTeamDeleted) {
         let idTeam = $button.getAttribute('data-id-team');
 
