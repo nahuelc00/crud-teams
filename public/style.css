@@ -9,6 +9,8 @@ body {
   font-family: system-ui;
 }
 
+/* Main */
+
 main {
   padding: 30px 10px 10px 10px;
 }
@@ -53,7 +55,7 @@ main {
   margin: 0 auto;
 }
 
-.titles-grid {
+.titles {
   display: flex;
   justify-content: space-around;
   margin: 0 auto 30px auto;
@@ -62,24 +64,17 @@ main {
   max-width: 600px;
 }
 
-.titles-grid > p {
+.titles > p {
   margin: 0;
 }
 
-.teams-container {
+.grid__teams-container {
   display: grid;
 }
 
-img {
-  width: 35px;
-  height: 35px;
-  margin: 0 15px 0 0;
-}
-@media (min-width: 481px) {
-  img {
-    height: 50px;
-    width: 50px;
-  }
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -90,10 +85,18 @@ li {
   list-style: none;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+.team__img {
+  width: 35px;
+  height: 35px;
+  margin: 0 15px 0 0;
 }
+@media (min-width: 481px) {
+  .team__img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
 
 .actions {
   display: grid;
@@ -122,4 +125,154 @@ ul {
 .actions__edit:hover,
 .actions__delete:hover {
   color: cadetblue;
+}
+
+/* Form add team */
+
+fieldset {
+  display: grid;
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-addTeam {
+  margin: 20px 5px 20px 5px;
+  max-width: 250px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 769px) {
+  .form-addTeam {
+    max-width: 900px;
+    margin: 30px 10px 0 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .form-addTeam {
+    margin: 30px auto 0 auto;
+  }
+}
+
+.form-addTeam .error {
+  margin: 5px 0 0 0;
+  color: #f0394d;
+  height: 30px;
+}
+
+.form-addTeam button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  width: 180px;
+  border-style: none;
+  border-radius: 100px;
+  font-family: system-ui;
+  color: black;
+  font-weight: 600;
+  border: 3px solid black;
+}
+
+input {
+  height: 25px;
+  border-radius: 5px;
+  border-style: none;
+  outline: none;
+  font-family: system-ui;
+  font-size: 15px;
+  padding: 0 0 0 5px;
+}
+
+label {
+  margin: 0 0 5px 0;
+}
+
+/* Team page */
+
+.team-page {
+  display: grid;
+  justify-items: center;
+  margin: 50px auto 20px auto;
+  max-width: 500px;
+}
+
+.team-page__container-close {
+  width: 100%;
+}
+
+.team-page__close {
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (min-width: 481px) {
+  .team-page__close {
+    font-size: 25px;
+  }
+}
+
+.team-page__img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+}
+
+.team-page__title {
+  margin: 20px 0 40px 0;
+  font-size: 24px;
+}
+@media (min-width: 481px) {
+  .team-page__title {
+    font-size: 32px;
+  }
+}
+
+.team-page__information {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
+}
+@media (min-width: 481px) {
+  .team-page__information {
+    gap: 50px;
+  }
+}
+
+.team-page__information p,
+.team-page__information a {
+  margin: 0;
+  font-size: 12px;
+}
+@media (min-width: 481px) {
+  .team-page__information p,
+  .team-page__information a {
+    font-size: 16px;
+  }
+}
+
+.team-page__information a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.team-page__information-last {
+  margin: 0 0 30px 0;
+}
+
+.team-page__value {
+  font-weight: 500;
+}
+
+.team-page__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-buttons-page-team {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin-top: 10px;
 }
