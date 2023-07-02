@@ -106,7 +106,7 @@ app.post('/teams', upload.single('shieldImg'), (req, res) => {
   fs.writeFileSync(`./data/equipos/${newTeam.tla}.json`, JSON.stringify(newTeam));
 
   res.statusCode = 200;
-  res.send('Team Saved Successfuly');
+  res.send(newTeam);
 });
 
 app.delete('/team/:id', (req, res) => {
@@ -159,7 +159,7 @@ app.put('/team/:id', upload.single('shieldImg'), (req, res) => {
   fs.writeFileSync(`./data/equipos/${updatedTeam.tla}.json`, JSON.stringify(updatedTeam));
 
   res.statusCode = 200;
-  res.send('Team modified');
+  res.send(updatedTeam);
 });
 
 app.listen(port, () => {
