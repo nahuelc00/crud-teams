@@ -99,7 +99,7 @@ app.post('/teams', upload.single('shieldImg'), (req, res) => {
   const teamsToUpdate = getTeams();
   const lastTeam = teamsToUpdate[teamsToUpdate.length - 1];
 
-  newTeam.id = lastTeam.id + 1;
+  newTeam.id = Number(lastTeam.id) + 1;
   teamsToUpdate.push(newTeam);
 
   fs.writeFileSync('./data/equipos.json', JSON.stringify(teamsToUpdate));
@@ -132,7 +132,7 @@ app.put('/team/:id', upload.single('shieldImg'), (req, res) => {
   const paramTeam = JSON.parse(JSON.stringify(req.body));
 
   const updatedTeam = {
-    id: paramTeam.id,
+    id: Number(paramTeam.id),
     area: { id: paramTeam.idArea, name: paramTeam.nameArea },
     name: paramTeam.name,
     shortName: paramTeam.shortName,
@@ -145,6 +145,7 @@ app.put('/team/:id', upload.single('shieldImg'), (req, res) => {
     clubColors: paramTeam.colors,
     venue: paramTeam.stadium,
     crestUrl: `http://localhost:8080/${shieldFile.filename}`,
+    lastUpdated: new Date().toISOString(),
   };
 
   const paramTeamId = Number(paramTeam.id);
