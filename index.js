@@ -1,6 +1,5 @@
 const express = require('express');
 const fs = require('fs');
-const cors = require('cors');
 const multer = require('multer');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
@@ -17,7 +16,6 @@ app.engine('handlebars', handlebars.engine({
 }));
 
 app.use(bodyParser.json());
-app.use(cors());
 app.use(express.static('public'));
 app.use(express.static(`${__dirname}/uploads`));
 
